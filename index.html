@@ -5,41 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Michelly Pessoa Studio</title>
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; }
+  * { margin:0; padding:0; box-sizing:border-box; }
   body, html { height:100%; width:100%; }
 
-  /* Container da capa */
   .hero {
-    position: relative;
-    height: 100vh; /* ocupa toda a altura da tela */
-    width: 100%;
-    background: url('IMG-20260315-WA0001.jpg') center top / cover no-repeat; /* topo visível */
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* conteúdo no topo, se houver */
-    overflow: hidden;
+    width:100%;
+    overflow:hidden;
   }
 
-  /* Overlay opcional para suavizar a imagem */
-  .overlay {
-    position: absolute;
-    top:0; left:0;
-    width:100%; height:100%;
-    background: rgba(0,0,0,0); /* transparente, pode ajustar se quiser escurecer */
-    z-index:1;
+  .hero img {
+    width:100%;       /* ocupa toda largura */
+    height:auto;      /* mantém proporção */
+    display:block;    /* remove espaços em branco */
+    object-fit: cover; /* mantém o zoom mínimo necessário */
   }
 
-  /* Responsividade */
+  /* Para telas muito estreitas */
   @media(max-width:768px){
-    .hero {
-      background-position: center top; /* topo sempre visível no celular */
+    .hero img {
+      width:100%;
+      height:auto;
     }
   }
 </style>
 </head>
 <body>
   <section class="hero">
-    <div class="overlay"></div>
+    <img src="URL_DA_SUA_IMAGEM.jpg" alt="Capa Michelly Pessoa Studio">
   </section>
 </body>
 </html>
